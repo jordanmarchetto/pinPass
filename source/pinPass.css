@@ -1,0 +1,61 @@
+div.pinPassBox{
+    height: 150px;
+    width: 150px;
+    /*margin-left: 50px;*/
+    /*background: #e7e7e7;*/
+    margin-top: 10px;
+    background: none;
+    border: 1px solid black;
+}
+
+
+div.pin, div.staticPin{
+         -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    background: #666666;
+    float: left;
+    border-radius: 30px;
+    margin: 10px;
+    opacity: 0.5;
+
+} 
+div.pin{
+    /*position:relative;
+    top:-10px;
+    left: -10px;*/
+    background: cyan;
+    margin:0px;
+    z-index: 100;
+    display: none;
+}
+
+div.pinPassBox > div.passToggle{
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    text-align: center;
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: .8em;
+    color: #666;
+}
+div.pinPassBox > div.passToggle > a{
+    
+}
+div.pinPassBox > div.passToggle:hover { color: black; font-weight: bold; cursor: pointer}
+div.dragging{
+    background: #dddddd;
+}
+
+div.visited{
+    background: red;
+}
+
+div.pin:hover {
+   /* border: 1px solid #E0B81B*/
+}
