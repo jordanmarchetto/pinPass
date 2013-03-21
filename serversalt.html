@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Server Salt</title>       
+        <link rel="stylesheet" type="text/css" href="pinPass.css" />
+        <script src="jquery.js"></script>
+        <script src="jquery.ui.js"></script>    
+        <script src="raphael.js"></script>  
+        <script src="jquery.pinPass.js"></script>
+        
+        <script type="text/javascript">
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+            );
+        } 
+        
+        //the following runs on page load
+        $(document).ready(function(){
+            var SALT = getURLParameter("salt");
+            $("#salt").val(SALT);
+            $("#pinPass1").pinPass({salt: SALT});
+            
+        });       
+        </script>
+        
+        
+        
+        
+    </head>
+  <body>
+    <div>
+        <form method="get" action="" >
+        Salt <input type="text" name="sometext" value="" id="salt" disabled="disabled" /> <br/>
+        Password <input type="password" name="password" id="pinPass1"/> <br/>
+        <input type="submit"/>
+        </form>
+    </div>
+    
+    <br/><br/><a href="index.html">&lt;-- Back</a>
+  </body>
+</html>

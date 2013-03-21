@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Timestamp Salt</title>       
+        <link rel="stylesheet" type="text/css" href="pinPass.css" />
+        <script src="jquery.js"></script>
+        <script src="jquery.ui.js"></script>    
+        <script src="raphael.js"></script>  
+        <script src="jquery.pinPass.js"></script>
+        
+        <script type="text/javascript">
+        //the following runs on page load
+        $(document).ready(function(){
+            $("#pinPass1").pinPass({dynamicSalt: "#salt"});
+            
+              updateTime();
+            //t=setTimeout(function(){}, 500);
+        });     
+        
+        function updateTime(){
+            var d = new Date();
+            var time = d.getHours() + ":" + (d.getMinutes()<10?"0"+d.getMinutes():d.getMinutes()) + ":" + (d.getSeconds()<10?"0"+d.getSeconds():d.getSeconds());
+           $('#salt').val(time);
+           t=setTimeout(function(){updateTime()}, 1000);
+        }     
+        </script>
+        
+        
+    </head>
+  <body>
+    <div>
+        <form method="get" action="" >
+        Time Salt <input type="text" name="sometext" value="" id="salt" disabled="disabled"/> <br/>
+        Password <input type="password" name="password" id="pinPass1"/> <br/>
+        <input type="submit"/>
+        </form>
+    </div>
+    
+    <br/><br/><a href="index.html">&lt;-- Back</a>
+  </body>
+</html>

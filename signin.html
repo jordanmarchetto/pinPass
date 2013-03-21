@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Sign In</title>       
+        <link rel="stylesheet" type="text/css" href="pinPass.css" />
+        <script src="jquery.js"></script>
+        <script src="jquery.ui.js"></script>    
+        <script src="raphael.js"></script>  
+        <script src="jquery.pinPass.js"></script>
+        <script type="text/javascript">   
+            $(document).ready(function(){
+                $("#graphicPass").pinPass({allowPasswordInput: true, allowPasswordToggle: false, allowPasswordPeek: false});
+            });                                           
+        </script>
+    </head>
+  <body>
+      <form>
+      Username <input type="text" /> <br/>
+      Password <input type="password" id="graphicPass" /> 
+      </form>
+      
+      <br/><br/><a href="index.html">&lt;-- Back</a>
+  </body>
+</html>
+
+
+
+
+
